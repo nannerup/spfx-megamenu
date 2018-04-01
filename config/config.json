@@ -1,0 +1,20 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "mega-menu-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/megaMenu/MegaMenuApplicationCustomizer.js",
+          "manifest": "./src/extensions/megaMenu/MegaMenuApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    
+  },
+  "localizedResources": {
+    "MegaMenuApplicationCustomizerStrings": "lib/extensions/megaMenu/loc/{locale}.js"
+  }
+}
