@@ -97,6 +97,13 @@ export default class MegaMenuApplicationCustomizer
     //Normal menu is hidden if width is below 959px, and jquery adds mobile menu
     //Done this way so it can be used with wordpress without any trouble
 
+	//Make sure that menu is hidden when resizing the window to desktop
+	jQuery(window).resize(function(){
+      if (jQuery(window).width() > 943) {
+        jQuery("#menu > ul > li").children("ul").hide();
+      }
+    });
+	
     jQuery("#menu > ul > li").hover(function (e) {
       if (jQuery(window).width() > 943) {
         jQuery(this).children("ul").stop(true, false).fadeToggle(150);
